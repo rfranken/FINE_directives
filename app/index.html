@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html ng-app="demo">
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title text="">Angular JS domainlist Demo</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="directives.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+  <body ng-controller="domainlistDemo">
+    <h1>domainlist Demo</h1>
+    <span id="selected">Selected contact person: <b>ID:{{contactpersoon.ID}}</b>&nbsp; Dit is de $scope.contactpersoon.ID</span>
+    <domainlist placeholder="Kies contactpersoon..." domain-name="contactpersonen"  selected-id="290" return-object="contactpersoon"></domainlist>
+    <span id="selectedx">Selected contract type: <b>ID:{{contracttype.ID}}</b></span>
+    <domainlist placeholder="Kies contracttype..." domain-name="contracttypes"  selected-id="" return-object="contracttype"></domainlist>
+  </body>
+</html>

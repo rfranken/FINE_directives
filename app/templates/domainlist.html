@@ -1,0 +1,17 @@
+<div class="domain list-container">
+    <select
+            ng-change="select(selected)"
+            ng-model="selected"
+            ng-disabled="!querySuccessful"
+            ng-options="item as item.name for item in domainItems">
+            <option value='' disabled selected>{{placeholder}}</option>
+    </select>
+    <span class="domain error-indicator">
+        <img ng-show="queryError"
+             src="images/error.gif"
+             title={{errorMessage}}>
+    </span>
+    <div class="domain indicator">
+            <div ng-show="queryInOperation"><img src="images/throbber.gif"/></div>
+    </div>
+</div>
