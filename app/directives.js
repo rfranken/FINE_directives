@@ -16,7 +16,7 @@
  [3] de geselecteerde id-waarde wordt opgehaald via:
  "<return-object>.id"
 */
-var app = angular.module("FINE$directives", ['ngResource']);
+var app = angular.module("fine.directives", ['ngResource']);
 
 app.constant('RESOURCE_URL','http://localhost:3001/');
 app.constant('MAX_FETCH_SIZE',50);
@@ -67,7 +67,7 @@ app.directive("domainlist", function($rootScope,$filter, domainResource) {
                     scope.queryError = true;
                     scope.queryInOperation = false;
                     console.log('Fout:' + scope.errorMessage);
-                })
+                });
 
             // De eerst geselecteerde wordt afgeleid uit de directive HTML, attribuut: "selectedID".
             scope.getFirstSelected =   function(itemID) {
@@ -77,7 +77,7 @@ app.directive("domainlist", function($rootScope,$filter, domainResource) {
                 } else {
                     return '';
                 }
-            }
+            };
 
             scope.select = function(item) {
                 // For the template:

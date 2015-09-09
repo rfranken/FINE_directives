@@ -1,4 +1,4 @@
-var app = angular.module("demo", ['ngResource','FINE$directives']);
+var app = angular.module("demo", ['ngResource','fine.directives']);
 
 
 /*
@@ -6,7 +6,7 @@ var app = angular.module("demo", ['ngResource','FINE$directives']);
  is het opnemen van een object om het geselecteerde domainlist item in op te slaan:
 */
 
-app.controller("domainlistDemo", function($scope,domainResource) {
+app.controller("domainlistDemo", function($scope) {
     $scope.contactpersoon = {};
     $scope.contracttype = {};
 });
